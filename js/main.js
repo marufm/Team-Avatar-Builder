@@ -53,7 +53,10 @@ var avatar_maker = {
                 for (var i = 0, f; f = files[i]; i++) {
 
                     if (!f.type.match('image.*')) {
-                        continue;
+                        $('#working_msg').hide();
+                        $('#drop_area_box').show();
+                        alert('Thats not an image file dummy, try again');
+                        break;
                     }
 
                     var reader = new FileReader();
@@ -84,6 +87,7 @@ var avatar_maker = {
 			$('#image_out').append(the_piece);
 		}
 		$('#working_msg').hide();
+		$('#print_msg').show();
 		
 	} /* END create_peices() */
 }
