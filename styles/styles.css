@@ -451,7 +451,7 @@ body {
 }
 @page {
   size: 21cm 29.7cm;
-  margin: 1cm;
+  margin: 2cm;
 }
 @media print {
   #drop_area_box {
