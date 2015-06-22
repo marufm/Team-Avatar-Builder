@@ -393,10 +393,24 @@ body {
   border-width: 5px;
   background-color: #ededed;
 }
+#image_out {
+  border: 1px solid #d1d1d1;
+  box-sizing: border-box;
+}
+#image_out:before,
+#image_out:after {
+  content: " ";
+  display: table;
+}
+#image_out:after {
+  clear: both;
+}
 .piece {
   position: relative;
-  width: 192px;
+  width: 20%;
   float: left;
+  box-sizing: border-box;
+  border: 1px solid #d1d1d1;
 }
 .piece img {
   width: 100%;
@@ -446,5 +460,11 @@ body {
   }
   #print_msg {
     display: none !important;
+  }
+  #image_out {
+    border: 1px solid #d1d1d1 !important;
+  }
+  .piece {
+    border: 1px solid #d1d1d1 !important;
   }
 }
