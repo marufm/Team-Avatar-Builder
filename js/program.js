@@ -71,12 +71,16 @@ var avatar_maker = {
 	create_pieces : function(img_data, img_name){
 		for (var i = 0; i < 25; i++) {
 			var the_piece = $('<div />', {class: 'piece'});
+            var img_wrapper = $('<div />', {class: 'img_wrap'});
 			
 			var the_img = $('<img />', {src: img_data});
 			var the_label = $('<p />', {class: 'label'});
 			the_label.html(img_name);
 
-			the_piece.append(the_img);
+
+			img_wrapper.append(the_img);
+            the_piece.append(img_wrapper);
+
 			the_piece.append(the_label);
 			$('#image_out').append(the_piece);
 		}

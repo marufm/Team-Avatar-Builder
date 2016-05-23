@@ -57,6 +57,23 @@ body{
 	display: block;
 	margin: 0;
 	padding: 0;
+	position: absolute;
+	top:0;
+}
+
+.piece .img_wrap{
+	width:100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.piece .img_wrap:before{
+	content:"";
+	width: 100%;
+	display: block;
+	position: relative;
+	padding-top: 85%;
+	overflow: hidden;
 }
 
 .piece .label{
