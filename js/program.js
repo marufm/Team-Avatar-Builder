@@ -41,6 +41,7 @@ var avatar_maker = {
                 $(this).removeClass('over');
                 $('#working_msg').show();
                	$('#drop_area_box').hide();
+                $('.instructions').hide();
 
                 var files = thisEvent.dataTransfer.files; // FileList object
                 // Loop through the FileList and render image files as thumbnails.
@@ -49,6 +50,7 @@ var avatar_maker = {
                     if (!f.type.match('image.*')) {
                         $('#working_msg').hide();
                         $('#drop_area_box').show();
+                        $('.instructions').hide();
                         alert('Thats not an image file dummy, try again');
                         break;
                     }
@@ -86,6 +88,7 @@ var avatar_maker = {
 		}
 		$('#working_msg').hide();
 		$('#print_msg').show();
+        $('.instructions').hide();
 		
 	} /* END create_peices() */
 }
